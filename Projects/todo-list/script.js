@@ -17,5 +17,14 @@ addBtn.addEventListener("click", () => {
         li.appendChild(deleteBtn);
         taskList.appendChild(li);
         taskInput.value = "";
+
+        function editTask(button) {
+  const task = button.parentElement.querySelector('span');
+  const newText = prompt('Edit your task:', task.textContent);
+  if (newText !== null && newText.trim() !== '') {
+    task.textContent = newText.trim();
+  }
+}
+
     }
 });
